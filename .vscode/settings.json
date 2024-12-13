@@ -1,0 +1,28 @@
+{
+    "php.validate.executablePath": "",
+    "php.executablePath": "",
+    "php.files.exclude": [],
+    "editor.fontSize": 13,
+    "files.autoSave": "afterDelay",
+    "editor.wordWrap": "on",
+    "editor.fontVariations": false,
+    
+
+
+        "editor.fontWeight": "normal",
+        "editor.tokenColorCustomizations": {
+            "textMateRules": [
+                {
+                    "scope": [
+                        "string.quoted.double.html", 
+                        "string.quoted.single.html",
+                    ],
+                    "settings": {
+                        "fontStyle": "italic",
+                        "foreground": "#bed31f"
+                    }
+                }
+            ]
+        }
+    }
+    

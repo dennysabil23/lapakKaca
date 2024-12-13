@@ -1,0 +1,248 @@
+@font-face {
+  font-family: 'MiSansLatin';
+  src: url('../asset/font/MiSansLatin-Regular.ttf') format('truetype'); 
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'MiSansLatin';
+    margin: 0;
+    padding: 0;
+    user-select: none;
+
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1a2838;
+  background-image: linear-gradient(to right, #1a2838, #444f5a);
+  color: #ffffff;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 70px;
+  width: 100%;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header-container h2 {
+  color: #2a3a4f;
+  border-left: 2px solid #2a3a4f;
+  padding: 5px;
+  font-size: 14pt;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+  cursor: pointer;
+}
+
+.section {
+  margin-top: 150px;
+}
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 40px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  color: #000;
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+}
+
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 130px; /* Jarak antara form dan pratinjau gambar */
+}
+
+.form-wrapper .priview {
+  background-color: #2a3a4f;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+}
+
+.update-pic-profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none;
+}
+
+.update-pic-profile img {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+}
+
+
+.edit-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12pt;
+  color: #2a3a4f;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); 
+}
+
+table {
+  margin-top: 40px;
+  width: 400px;
+}
+
+td {
+  padding-right: 40px;
+  text-align: right;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 3px;
+  border: 1px solid #bababa;
+}
+
+button {
+  padding: 10px;
+  width: 75px;
+  border-radius: 3px;
+  background-color: #2a3a4f;
+  color: #fff;
+  border: none;
+  font-size: 9pt;
+}
+
+button:hover {
+  background-color: #3d536f;
+}
+
+input:focus {
+  outline: none;
+}
+
+.gender select {
+  width: 80%;
+  padding: 12px 12px 12px 5px;
+  position: relative;
+  border: 1px solid #bababa;
+  border-radius: 3px;
+  color: #555;
+  font-size: 10pt;
+  
+}
+
+
+
+/* Style untuk input */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"] {
+  position: relative;
+  padding: 10px 10px 10px 5px;
+  width: 100%;
+  font-size: 10pt;
+  border: 1px solid #bababa;
+  border-radius: 3px;
+}
+
+/* Label Style */
+label {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  font-size: 10pt;
+  color: #555;
+  pointer-events: none;
+  /* Agar klik tidak mengganggu */
+  transition: 0.2s ease all;
+  /* Transisi untuk label */
+}
+
+/* Floating label style */
+.floating-label {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+/* Label yang akan mengapung */
+.floating-label label {
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  font-size: 9pt;
+  color: #555;
+  transition: 0.2s ease all;
+  pointer-events: none;
+}
+
+/* Efek floating ketika fokus atau terisi */
+.floating-label input:focus~label,
+.floating-label input:not(:placeholder-shown)~label {
+  top: -2px;
+  padding: 0 5px;
+  background: #fff;
+  left: 10px;
+  font-size: 8pt;
+  color: #000000;
+}
+
+.floating-label input::placeholder {
+  color: transparent;
+}
+
+/* Custom style untuk elemen di rata kiri */
+.left-label {
+  font-size: 10pt;
+  width: 70%;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.left-input {
+  width: 70%;
+  padding: 8px;
+  font-size: 10pt;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.inputLeft {
+  text-align: left;
+}
+
+.gender {
+  margin-left: 5px;
+  color: #555;
+}

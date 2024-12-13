@@ -1,0 +1,190 @@
+@font-face {
+  font-family: 'MiSansLatin';
+  src: url('../asset/font/MiSansLatin-Regular.ttf') format('truetype'); 
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'MiSansLatin';
+    margin: 0;
+    padding: 0;
+    user-select: none;
+
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1a2838;
+  background-image: linear-gradient(to right, #1a2838, #444f5a);
+  color: #ffffff;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 70px;
+  width: 100%;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header-container h2 {
+  color: #2a3a4f;
+  border-left: 2px solid #2a3a4f;
+  padding: 5px;
+  font-size: 14pt;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+  cursor: pointer;
+}
+
+.section {
+  margin-top: 100px;
+}
+
+table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cartImage {
+  width: 70px;
+  height: 70px;
+  border-radius: 3px;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  color: #2a3a4f;
+}
+
+th {
+  background-color: #2a3a4f;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+td {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+table thead {
+  border-bottom: 2px solid #2a3a4f;
+}
+
+button {
+  background-color: #2a3a4f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 10pt;
+}
+
+button:hover {
+  background-color: #3b4a5b;
+}
+
+p {
+  text-align: center;
+  font-size: 12pt;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.checkout-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #d8d8d8;
+  text-align: right;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px;
+  color: #2a3a4f;
+}
+
+.checkout-container p {
+  font-size: 12pt;
+  margin-right: auto;
+}
+
+.checkout-btn,
+.delete-btn {
+  background-color: #2a3a4f;
+  color: #ffffff;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  font-size: 12pt;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 40px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.buttonAksi {
+  margin-right: 60px;
+}
+
+.delete-btn:hover {
+  color: #fff;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.totalHarga {
+  font-weight: bold;
+}
+
+.cartKosong {
+  margin-top: 200px;
+  text-align: center;
+}
+.cartKosong button {
+  background: #fff;
+  color: #2a3a4f;
+}
+.cartKosong button:hover {
+  background: #444f5a;
+  color: #fff;
+}
+.cartKosong img {
+  width: 10%;
+}

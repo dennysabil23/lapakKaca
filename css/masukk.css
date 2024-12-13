@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'MiSansLatin';
+    src: url('../asset/font/MiSansLatin-Regular.ttf') format('truetype'); 
+    font-weight: normal; 
+    font-style: normal; 
+  }
+  
+  * {
+      box-sizing: border-box;
+      font-family: 'MiSansLatin';
+      margin: 0;
+      padding: 0;
+      user-select: none;
+  
+  }
+  
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    margin: 0;
+}
+
+.login-container {
+    margin-top: 100px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+}
+
+.error-message {
+    color: #a43131;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 9pt;
+    font-style: italic;
+}
+.success-message {
+    color: #107715;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 9pt;
+    font-style: italic;
+}
+
+.login-container img {
+    width: 300px;
+    margin-bottom: 2px;
+}
+.login-container form {
+    text-align: center;
+    position: relative;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    transition: border-bottom 0.3s ease;
+}
+.login-container input:focus {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #2a3a4f;
+    color: #2a3a4f;
+}
+
+.login-container button {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    width: 50%;
+    padding: 10px;
+    background-color: #2a3a4f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #1f2b3b;
+    color: #fff;
+}
+.login-container .forget {
+    font-size: 8pt;
+    font-weight: bold;
+    text-decoration: none;
+    position: absolute;
+    left: 5%;
+    bottom: 105px;
+    color: #2a3a4f;
+}
+.login-container .daftar {
+    text-decoration: none;
+    font-size: 10pt;
+    color: #2a3a4f;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .login-container {
+        margin-top: 30px;
+    }
+}

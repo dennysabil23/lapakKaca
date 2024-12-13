@@ -1,0 +1,190 @@
+@font-face {
+    font-family: 'MiSansLatin';
+    src: url('../asset/font/MiSansLatin-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'MiSansLatin';
+    margin: 0;
+    padding: 0;
+    user-select: none;
+
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar .brand {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.sidebar .menu {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sidebar .menu li {
+    margin-bottom: 15px;
+}
+
+.sidebar .menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sidebar .menu a:hover {
+    background: #34495e;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+    overflow-y: auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+form label {
+    font-size: 1rem;
+    color: #34495e;
+}
+
+form input,
+form select,
+form textarea,
+form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    outline: none;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #2980b9;
+}
+
+form button {
+    background-color: #2a3a4f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #3b4a5b;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table thead {
+    background-color: #2a3a4f;
+    color: white;
+}
+
+table thead th {
+    padding: 10px;
+    text-align: left;
+}
+
+table tbody td {
+    padding: 10px;
+    border: 1px solid #2a3a4f;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 8px;
+    text-align: left;
+}
+
+table td {
+    color: #1f1f1f;
+}
+
+table th {
+    background-color: #2a3a4f;
+    font-weight: bold;
+    border: 1px solid #2a3a4f;
+}
+
+table ul {
+    padding: 20px;
+}
+
+table img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* CSS tetap sama kecuali untuk menyembunyikan menu */
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.menu .menu-link.active {
+    background-color: #34495e;
+    color: white;
+    font-weight: bold;
+}
