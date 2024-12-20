@@ -102,7 +102,7 @@ include '../koneksi.php';
           </a>
         </div>
         <div class="menuPembayaran">
-          <a href="user.php?section=pembayaran">
+          <a href="galeri.html">
             <i class="bi bi-image-fill"></i>
             <span>Galeri</span>
           </a>

@@ -7,16 +7,77 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #bababa;
+    margin-top: 30px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 50px;
+    width: 100%;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header-container h2 {
+    color: #2a3a4f;
+    border-left: 2px solid #2a3a4f;
+    padding: 5px;
+    font-size: 14pt;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+    cursor: pointer;
+}
+
+.sidebar {
+    margin: 0 10px;
+    width: 100%;
+    max-width: 300px;
+    height: 85vh;
+    background-color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .user-list {
+    padding: 0 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    text-decoration: none;
+    font-size: 11pt;
+    padding: 10px;
+    margin: 5px;
+    background-color: #f4f4f4;
+    color: #000;
+
 }
 
 .chat-container {
+    margin-right: 20px;
     width: 100%;
     max-width: 1200px;
-    height: 90vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: 3px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -24,8 +85,7 @@ body {
     background-color: #2a3a4f;
     padding: 15px;
     color: white;
-    font-weight: bold;
-    border-radius: 10px 10px 0 0;
+    border-radius: 3px 3px 0 0;
 }
 
 .header-title {

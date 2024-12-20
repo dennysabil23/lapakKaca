@@ -15,7 +15,6 @@ if ($product_id === 0) {
     die("ID produk tidak ditemukan.");
 }
 
-// Ambil produk
 $sql = "SELECT * FROM products WHERE id_product = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $product_id);

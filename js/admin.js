@@ -1,27 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Pilih semua menu dan section
-    const menuLinks = document.querySelectorAll(".menu-link");
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".card-link");
     const sections = document.querySelectorAll(".section");
 
-    menuLinks.forEach(link => {
-        link.addEventListener("click", event => {
-            event.preventDefault(); // Hindari reload halaman saat menu diklik
+    links.forEach((link) => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
 
-            // Hapus semua menu aktif
-            menuLinks.forEach(menu => menu.classList.remove("active"));
-
-            // Sembunyikan semua section
-            sections.forEach(section => section.classList.remove("active"));
-
-            // Tambahkan class 'active' ke menu yang diklik
-            link.classList.add("active");
-
-            // Tampilkan section yang sesuai
-            const targetSectionId = link.getAttribute("data-section");
-            const targetSection = document.getElementById(targetSectionId);
-            if (targetSection) {
-                targetSection.classList.add("active");
-            }
+            sections.forEach((section) => {
+                section.classList.remove("active");
+                if (section.id === targetId) {
+                    section.classList.add("active");
+                }
+            });
         });
     });
 });

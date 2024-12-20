@@ -89,6 +89,23 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+function openKonfirmasiAlamat() {
+    document.getElementById("konfirmasiAlamatModal").style.display = "block";
+}
+
+function closeKonfirmasiAlamat() {
+    document.getElementById("konfirmasiAlamatModal").style.display = "none";
+}
+
+function openKonfirmasiPesanan() {
+    document.getElementById("konfirmasiPesananModal").style.display = "flex";
+}
+
+function closeKonfirmasiPesanan() {
+    document.getElementById("konfirmasiPesananModal").style.display = "none";
+}
+
+
 // notifikasi hapus alamat
 
 if (window.location.search.includes("alamat_deleted=true")) {

@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'MiSansLatin';
+    src: url('../asset/font/MiSansLatin-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'MiSansLatin';
+    margin: 0;
+    padding: 0;
+    user-select: none;
+
+}
+
+body {
+    margin-top: 70px;
+    color: #ffffff;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 70px;
+    width: 100%;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header-container h2 {
+    color: #2a3a4f;
+    border-left: 2px solid #2a3a4f;
+    padding: 5px;
+    font-size: 14pt;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    align-content: center;
+}
+
+.galeri-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.latar {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #2a3a4f;
+
+}
+
+.latar span {
+    
+    margin: 10px auto;
+}
+
+.latar img {
+    width: 350px;
+    height: 350px;
+}
+
+footer {
+    background-color: #0f1925;
+    color: #ffffff;
+    padding: 20px 0;
+    font-size: 12pt;
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.footer-detail {
+    width: 40%;
+    margin: 10px;
+}
+
+.footer-detail p {
+    font-size: 10pt;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.footer-link {
+    margin: 0px 40px;
+    width: 15%;
+}
+
+.footer-link ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-link li {
+    margin: 10px 0;
+}
+
+.footer-link a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 10pt;
+}
+
+.footer-link a:hover {
+    font-weight: bold;
+}
+
+.footer-maps h5 {
+    margin-bottom: 40px;
+}
+
+.footer-social {
+    margin: 0 40px;
+}
+
+.footer-social ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-social li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-social a {
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.hakcipta {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 10pt;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+}
+
+.hakcipta a {
+    text-decoration: underline;
+    color: #fffd;
+}

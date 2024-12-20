@@ -3,13 +3,13 @@ session_start();
 include 'koneksi.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id_alamat = $_POST['id_alamat'];
+    $id_pembelian = $_POST['id_pembelian'];
 
-    $stmt = $conn->prepare("DELETE FROM alamat WHERE id_alamat = ?");
-    $stmt->bind_param("i", $id_alamat);
+    $stmt = $conn->prepare("DELETE FROM pembelian WHERE id_pembelian = ?");
+    $stmt->bind_param("i", $id_pembelian);
 
     if ($stmt->execute()) {
-        header("Location: ./page/user.php?alamat_deleted=true");
+        header("Location: ./page/user.php");
     } else {
         echo "Error: " . $stmt->error;
     }

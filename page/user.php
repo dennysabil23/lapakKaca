@@ -51,7 +51,8 @@ $result_alamat = $stmt_alamat->get_result();
 $alamat_id = $result_alamat->fetch_all(MYSQLI_ASSOC);
 $stmt_alamat->close();
 
-$sql_pembelian = "SELECT p.name AS nama_produk, 
+$sql_pembelian = "SELECT pb.id_pembelian, 
+                         p.name AS nama_produk, 
                          p.image AS foto_produk, 
                          pb.quantity, 
                          pb.total_pembayaran, 
@@ -68,6 +69,8 @@ $pembelian_id = $result_pembelian->fetch_all(MYSQLI_ASSOC);
 $stmt_pembelian->close();
 
 $conn->close();
+
+
 
 $profile_picture = $user_profile['profile_picture'] ? '../uploads/' . htmlspecialchars($user_profile['profile_picture']) : '../asset/default-pic.png';
 ?>
@@ -188,8 +191,13 @@ $profile_picture = $user_profile['profile_picture'] ? '../uploads/' . htmlspecia
                                 <p class="harga">Rp<?= number_format($pembelian['total_pembayaran'], 0, ',', '.'); ?></p>
                             </div>
                             <div class="info-order">
-                                <p><?= htmlspecialchars($pembelian['status_pembelian']); ?></p>
-                                <p class="waktu"><?= htmlspecialchars($pembelian['waktu_pembelian']); ?></p>
+                                <div class="order-flex-1">
+                                    <p><?= htmlspecialchars($pembelian['status_pembelian']); ?></p>
+                                    <p class="waktu"><?= htmlspecialchars($pembelian['waktu_pembelian']); ?></p>
+                                </div>
+                                <div class="batalkan-btn">
+                                    <button onclick="openKonfirmasiPesanan()">Batalkan Pesanan</button>
+                                </div>
                             </div>
                         </div>
 
@@ -228,11 +236,9 @@ $profile_picture = $user_profile['profile_picture'] ? '../uploads/' . htmlspecia
                             <p> <span>Kode Pos</span> <?= htmlspecialchars($alamat['kode_pos']) ?></p>
                         </div>
                         <p><span>(</span><?= htmlspecialchars($alamat['patokan']) ?><span>)</span></p>
-
-                        <form action="../hapus-alamat.php" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus alamat ini?');">
-                            <input type="hidden" name="id_alamat" value="<?= $alamat['id_alamat'] ?>">
-                            <button type="submit"> <i class="bi bi-trash3-fill"></i> Hapus</button>
-                        </form>
+                        <button type="button" class="btn-delete" onclick="openKonfirmasiAlamat()">
+                            <i class="bi bi-trash3-fill"></i> Hapus Alamat
+                        </button>
                     </div>
                 <?php endforeach; ?>
             <?php else: ?>
@@ -307,6 +313,37 @@ $profile_picture = $user_profile['profile_picture'] ? '../uploads/' . htmlspecia
                 </div>
                 <div class="modal-bottom">
                     <button type="submit" form="alamat-form" onclick="openNotifModal()">Simpan</button>
+                </div>
+            </div>
+        </div>
+        <div id="konfirmasiPesananModal" class="modalKonfirmasiPesanan">
+            <div class="modal-content-konfirmasi" style="height: 250px;"> 
+                <h2>Konfirmasi Pembatalan</h2>
+                <p>Apakah Anda yakin ingin membatalkan pesanan ini?</p>
+                <select name="" id="">
+                    <option value="1">Berubah pikiran.</option>
+                    <option value="1">Barang terlalu mahal.</option>
+                    <option value="1">Ubah metode pembayaran. </option>
+                </select>
+                <div class="modal-actions-konfirmasi">
+                    <button class="btn-cancel" onclick="closeKonfirmasiPesanan()">Tidak</button>
+                    <form action="../batalkan-pesanan.php" method="POST">
+                        <input type="hidden" name="id_pembelian" value="<?= $pembelian['id_pembelian'] ?>">
+                        <button type="submit" class="btn-confirm">Yakin</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="konfirmasiAlamatModal" class="modalKonfirmasiAlamat">
+            <div class="modal-content-konfirmasi">
+                <h2>Hapus Alamat</h2>
+                <p>Apakah Anda yakin ingin menghapus alamat ini?</p>
+                <div class="modal-actions-konfirmasi">
+                    <button class="btn-cancel" onclick="closeKonfirmasiAlamat()">Tidak</button>
+                    <form action="../hapus-alamat.php" method="POST">
+                        <input type="hidden" name="id_alamat" value="<?= $alamat['id_alamat'] ?>">
+                        <button type="submit" class="btn-confirm">Iya</button>
+                    </form>
                 </div>
             </div>
         </div>

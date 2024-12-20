@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../koneksi.php'; 
+include '../koneksi.php';
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: masuk.php?login_required");

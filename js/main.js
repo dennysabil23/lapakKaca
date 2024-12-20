@@ -22,23 +22,23 @@ function showSlides() {
 const etalaseProducts = [
   {
     id: 1000,
-    name: "Etalase Datar 2 x 4 Meter",
-    image: "../asset/gambar-produk/etalaseDatar.jpg",
+    name: "Etalase Persegi 2 x 4 Meter",
+    image: "../asset/gambar-produk/etalaseDatar.png",
   },
   {
     id: 1001,
-    name: "Etalase Tinggi 4 x 2 Meter",
-    image: "../asset/gambar-produk/etalaseTinggi.jpg",
+    name: "Etalase Persegi 4 x 2 Meter",
+    image: "../asset/gambar-produk/etalaseTinggi.png",
   },
   {
     id: 1002,
-    name: "Grobak Etalase Usaha Kuliner (+ Roda)",
-    image: "../asset/gambar-produk/grobakUsaha.jpg",
+    name: "Etalase Usaha Kuliner",
+    image: "../asset/gambar-produk/grobakUsaha.png",
   },
   {
     id: 1003,
-    name: "Request Desain Sesuka Hati",
-    image: "../asset/gambar-produk/etalaseKastem.jpg",
+    name: "Gerobak Etalase",
+    image: "../asset/gambar-produk/etalaseKastem.png",
   },
 ];
 
